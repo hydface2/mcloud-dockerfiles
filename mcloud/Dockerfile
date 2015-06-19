@@ -15,3 +15,10 @@ ADD upstart.conf /etc/init/mcloud.conf
 ADD mcloud-server.yml /etc/mcloud/mcloud-server.yml
 
 RUN echo 'root:mcloud.io' | chpasswd
+RUN ln -sf /bin/bash /bin/sh
+ENV PS1 "\[\e[34;46m\][mcloud] \w\[\e[m\]\[\e[34;46m\]\$\[\e[m\]\[\e[46m\] \[\e[m\] "
+
+RUN apt-get update && apt-get install -y rsync vim
+
+# simplify mcloud development
+VOLUME /opt/mcloud/local/lib/python2.7/site-packages/mcloud

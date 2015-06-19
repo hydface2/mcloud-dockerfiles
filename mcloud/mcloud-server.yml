@@ -1,3 +1,2 @@
-demo_mode: true
 ssl:
     enabled: false
