@@ -1,5 +1,5 @@
 
-FROM ubuntu-upstart:14.10
+FROM ubuntu:14.10
 
 RUN apt-get update && apt-get install -y \
     redis-server python-dev python-pip libffi-dev \

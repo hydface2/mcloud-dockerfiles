@@ -1,0 +1,3 @@
+
+
+export TEST=$DOCKER_CERT_PATH

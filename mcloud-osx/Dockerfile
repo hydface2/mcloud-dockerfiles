@@ -12,3 +12,6 @@ ENV DOCKER_TLS_VERIFY="1" \
     MCLOUD_USE_DOCKER_MACHINE="1"
 
 
+ADD mcloud-server.yml /etc/mcloud/mcloud-server.yml
+
+
