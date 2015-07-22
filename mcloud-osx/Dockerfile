@@ -14,4 +14,8 @@ ENV DOCKER_TLS_VERIFY="1" \
 
 ADD mcloud-server.yml /etc/mcloud/mcloud-server.yml
 
+EXPOSE 80
+
+ENV MCLOUD_HOST="127.0.0.1:80"
+
 
