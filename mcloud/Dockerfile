@@ -16,7 +16,7 @@ RUN ln -s /opt/mcloud/bin/mcloud* /usr/bin/ && \
     ln -s /opt/mcloud/bin/pip /usr/bin/mcloud-plugins
 
 
-RUN curl -L https://github.com/docker/machine/releases/download/$DOCKER_MACHINE_VER/docker-machine_darwin-amd64 > /usr/local/bin/docker-machine
+RUN curl -L https://github.com/docker/machine/releases/download/$DOCKER_MACHINE_VER/docker-machine_linux-amd64 > /usr/local/bin/docker-machine
 RUN chmod +x /usr/local/bin/docker-machine
 
 COPY mcloud-server.yml /etc/mcloud/mcloud-server.yml
