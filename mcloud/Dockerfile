@@ -28,9 +28,6 @@ ENV PS1 "\[\e[34;46m\][mcloud] \w\[\e[m\]\[\e[34;46m\]\$\[\e[m\]\[\e[46m\] \[\e[
 # simplify mcloud development
 VOLUME /opt/mcloud/local/lib/python2.7/site-packages/mcloud
 
-
-
-# supervisor
-RUN pip install
+EXPOSE 7080
 
 CMD ["/usr/bin/supervisord"]
