@@ -10,7 +10,8 @@ RUN apt-get update && apt-get install -y \
 
 RUN mkdir /etc/mcloud && virtualenv /opt/mcloud
 
-RUN /opt/mcloud/bin/pip install mcloud supervisor-stdout
+RUN /opt/mcloud/bin/pip install mcloud
+RUN pip install supervisor-stdout
 RUN ln -s /opt/mcloud/bin/mcloud* /usr/bin/ && \
     ln -s /opt/mcloud/bin/pip /usr/bin/mcloud-plugins
 
@@ -26,6 +27,7 @@ ENV PS1 "\[\e[34;46m\][mcloud] \w\[\e[m\]\[\e[34;46m\]\$\[\e[m\]\[\e[46m\] \[\e[
 
 # simplify mcloud development
 VOLUME /opt/mcloud/local/lib/python2.7/site-packages/mcloud
+
 
 
 # supervisor
