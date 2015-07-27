@@ -1,7 +1,7 @@
 
 FROM ubuntu:14.10
 
-ENV MCLOUD_VERSION 0.10.1
+ENV MCLOUD_VERSION 0.11.0
 ENV DOCKER_MACHINE_VER v0.3.0
 
 RUN apt-get update && apt-get install -y \
@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y \
 
 RUN mkdir /etc/mcloud && virtualenv /opt/mcloud
 
-RUN /opt/mcloud/bin/pip install mcloud
+RUN /opt/mcloud/bin/pip install mcloud==$MCLOUD_VERSION
 RUN pip install supervisor-stdout
 RUN ln -s /opt/mcloud/bin/mcloud* /usr/bin/ && \
     ln -s /opt/mcloud/bin/pip /usr/bin/mcloud-plugins
