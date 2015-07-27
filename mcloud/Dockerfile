@@ -1,7 +1,7 @@
 
 FROM ubuntu:14.10
 
-ENV MCLOUD_VERSION 0.11.0
+ENV MCLOUD_VERSION 0.11.2
 ENV DOCKER_MACHINE_VER v0.3.0
 
 RUN apt-get update && apt-get install -y \
