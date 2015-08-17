@@ -1,8 +1,8 @@
 
 FROM ubuntu:14.10
 
-ENV MCLOUD_VERSION 0.11.3
-ENV DOCKER_MACHINE_VER v0.3.0
+ENV MCLOUD_VERSION 1.0.1
+ENV DOCKER_MACHINE_VER v0.4.1
 
 RUN apt-get update && apt-get install -y \
     redis-server python-dev python-pip libffi-dev \
